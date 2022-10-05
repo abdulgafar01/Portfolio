@@ -117,7 +117,28 @@ nav > ul> li >a:hover{
 .about-text{
     width: 55rem;
 }
-
+.about img{
+    width: 43rem;
+    height: auto;
+}
+.about-text h2{
+    font-size: 7.5rem;
+    color: var(--light-color);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.about-text h5{
+    font-size: 2.2rem;
+    color: var(--light-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2.5rem;
+}
 .main{
    width: 113rem;
+   max-width: 95%;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
 }
