@@ -116,7 +116,7 @@ nav > ul> li >a:hover{
     margin: 5rem;
 }
 .newsletter form{
-    width: 38rem;
+    width: 90%;
     max-width: 100%;
     position: relative;
     margin-bottom: 20px;
@@ -378,11 +378,10 @@ button:hover{
     }
     .newsletter form input:first-child{
         margin-top: 3rem;
-        width: 90%;
+        width: 100%;
     }
     .newsletter form input:last-child{
         top: 34px ;
-        right:43px;
     }
  }
 
