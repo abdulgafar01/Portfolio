@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My personal portfolio website</title>
+</head>
+<body>
+   <nav>
+        <div class="container nav__container">
+            <span class="nav__logo">
+                <a href="index.html" class="nav__logo">
+                    <h3>Code<span class="primary-color">heart</span></h3>
+                </a>
+                <div>
+                    <!-- image for dark mode -->
+                    X
+                </div>
+            </span>
+        <ul class="nav__menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>   
+   </nav> 
+
+
+   <!-- This is the website header -->
+   <header>
+      <div class="container header__container">
+        <div class="header__left">
+            <div class="socials">
+                <ul class="header__socials">
+                    <li><a href="" target="_blank"></a></li>
+                    <li><a href="" target="_blank"></a></li>
+                    <li><a href="" target="_blank"></a></li>
+                </ul>
+            </div>
+            <div>
+                <h3> Hello There! i'm </h3>
+            <h1>AbdulGafar</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                 Iusto aperiam aliquam commodi reiciendis, quod saepe.
+            </p>
+            <div class="header__left-button">
+                <a href="#contact" class="btn btn-primary">
+                    Get in touch
+                </a>
+                <a href="./pdf" download class="btn 
+                    btn-primary"><i class="uil uil-download-alt"></i> Download Cv 
+                </a>          
+            </div>
+  
+            </div>
+        </div>
+
+        <div class="header__right">
+            <!-- this where the tictactoe game is -->
+            <div class="game__container">
+                <div class="game__header">
+                    <span id="header">
+                        <div class="player"
+                        onclick="choosePlayer('X')"
+                        id="xPlayer">X</div>
+        
+                        <h3 id="titleHeader">Choose</h3>
+                        <div class="player"
+                        onclick="choosePlayer('O')"
+                        id="oPlayer">O</div>
+                    </span>
+                </div>
+                <div id="game__board">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+                <button class="btn btn-primary" id="restartBtn">
+                    Restart
+                </button>
+            </div>
+
+        </div>
+
+       </div>
+   </header>
+
+
+   <!-- companies section -->
+
+   <!-- <section id="companies">
+     
+   </section> -->
+
+   <script src="game.js"></script>
+</body>
+</html>
