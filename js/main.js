@@ -129,3 +129,36 @@ let mobileArea = document.querySelector(".mobileArea")
         rotateCards()
     
     })
+
+
+
+
+    // ========================/*
+    // function for portfolio section scroll    ===============            
+    // 
+    // 
+    // ================
+    // 
+    // **/
+
+    document.addEventListener("scroll", ()=>{
+        let projects = document.querySelectorAll('.portfolio__project');
+    
+    function scaleProjectPair(firstIndex, secondIndex, scaleIndex) {
+        let firstProject = projects[firstIndex];
+        let secondProject = projects[secondIndex];
+        let scale = 0.95;
+        
+        if (secondProject.getBoundingClientRect().top < firstProject.offsetHeight) {
+            firstProject.style.transform = `scale(${scale})`;
+        } else {
+            firstProject.style.transform = 'scale(1)';
+        }
+    }
+    
+    for (let i = 0; i < projects.length - 1; i++) {
+        scaleProjectPair(i, i + 1);
+    }
+    
+    })
+    

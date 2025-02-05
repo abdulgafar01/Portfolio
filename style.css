@@ -439,7 +439,7 @@ header{
     font-weight: bold;
     color: var(--color-primary);
     cursor: pointer;
-   transition: 0.3s background;
+   transition: all 0.5s ease-in;
 }
 
 #game__board .cell:hover {
@@ -788,7 +788,119 @@ button{
     }
     
    
+  /*================================== STYLES FOR PORTFOLIO SECTION ================================*/
+
+  #portfolio{
+    background-color: black;
+    line-height: normal;
+ }
+
+ .portfolio__head{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    padding: 5rem;
+    color: var(--primary-color);
+ }
+ .portfolio__projects{
+    max-width: 35rem;
+    margin: auto;
+    height: 300vh;
+ }
+
+ .portfolio__project{
+    position: sticky;
+    top: 0;
+    height: 55vh;
+    transform: scale(1);
+    transition: all 1s ease;
+    margin-bottom: 3rem;
+
+ }
+
+ .portfolio__project:nth-child(1){
+   top: 0;
+ }
+ .portfolio__project:nth-child(2){
+   top: 15px;
+ }
+ .portfolio__project:nth-child(3){
+   top: 30px;
+ }
+ .portfolio__project:nth-child(4){
+   top: 45px;
+ }
+
+ .portfolio__project-image{
+    height: 20rem;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 0 0 1.6rem var(--primary-color);
+    border-radius: 8px;
+    /* transition: all 400ms ease; */
+ }
+
+ .portfolio__project-image img{
+    transform: 0;
+    transition: all 4s ease;
+ }
+
+
+ .portfolio__project-image:hover img{
+    transform: translateY(calc(-100% + 18rem));
+ }
+
+ .portfolio__project-text{
   
+   z-index: 222;
+   background-color: rgba(149, 43, 255, 0.5);
+   backdrop-filter: blur(20px);
+   padding: 1rem;
+   max-width: 23rem;
+   height: 10.5rem;
+   color: black;
+   width: fit-content;
+   border-radius: 10px;
+   border: 1px solid rgba(225, 225, 225, 0.1);
+   transform: translate(380px, -7rem);
+ }
+
+ .portfolio__project-text h3{
+   font-size: 1.5rem;
+   text-align: center;
+   text-transform: uppercase;
+ }
+
+
+ .portfolio__project-text .portfolio__link{
+  display: flex;
+  justify-content: flex-end;
+  gap: 2px;
+ }
+
+
+ .portfolio__project-text .portfolio__link a{
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  text-decoration: none;
+  align-items: center;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border-radius: 10px;
+  background: var(--primary-color);
+  color: black;
+ }
+
+ .portfolio__project-text .portfolio__link a:hover{
+   transform: (1px -3px);
+   background-color: #f5f5f5;
+   color: blue;
+ }
+
 
 
 
@@ -802,7 +914,7 @@ button{
 
 
 
-
+/*================================ This is for responsiveness in tablets and mobile devices==================================================== */
 
 
 
@@ -909,13 +1021,20 @@ button{
 
 
 
+      /* portfolio section */
+      .portfolio__project-text{
+        transform: translate(260px, -7rem);
+  }
+
+
+
     
 }
 
 
 
 
-
+/* for mobile responsiveness */
 
 @media screen and (max-width:600px) {
      
@@ -1009,5 +1128,42 @@ button{
       }
 
 
+      /*====================== portfolio section mobile======================= */
+
+      .portfolio__project{
+        width: 23rem;
+        margin: auto;
+      }
+
+      .portfolio__project-text{
+          /* left: 2rem;
+          bottom: 1.5rem; */
+          width: 300px; 
+          transform: translate(2rem, -2rem);
+        }
+        
+        .portfolio__project-text h3{
+          /* font-size: 10px; */
+        }
+
   
 }
+
+
+
+@media screen and (max-height:600px) {
+
+    .portfolio__projects{
+      height: 400vh;
+   }
+    .portfolio__project{
+     height: 80vh;
+    }
+  
+    .portfolio__project-text{
+      transform: translate(15rem, -9rem);
+  }
+  
+   }
+  
+  
