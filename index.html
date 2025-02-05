@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
     <link rel="stylesheet" href="style.css">
     <title>My personal portfolio website</title>
 </head>
@@ -12,40 +12,143 @@
    <nav>
         <div class="container nav__container">
             <span class="nav__logo">
-                <a href="index.html" class="nav__logo">
+                <a href="index.html">
                     <h3>Code<span class="primary-color">heart</span></h3>
                 </a>
-                <div>
+                
+                <div class="bulb" id="darkmode">
                     <!-- image for dark mode -->
-                    X
+                    <img src="./images/light-bulb.png" alt="" srcset="" class="light__bulb">
+                    <div id="glow"></div>
+                    <audio id="audio" src="asset/click.mp3" autoplay="false"></audio>
                 </div>
             </span>
-        <ul class="nav__menu">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="#services">SERVICES</a></li>
-            <li><a href="#portfolio">PORTFOLIO</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-        <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
-        <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
-        </div>   
+        <div class="nav__menu">
+            <a class="current" href="index.html">HOME</a>
+            <a href="#services">SERVICES</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
+            <!-- <span></span> -->
+        </div>
+      
+    </div>   
    </nav> 
+
+<!-- -------------- NAV FOR MOBILE DEVICES---------- -->
+
+<div class="mobile__nav">
+    <span class="navigation__tab">
+        <div class="navigation__tab-item active">
+            <a href="#home">
+          <span class="navigation__tab-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 24 24" width="24" height="24" 
+                        class="main-grid-item-icon" fill="none" 
+                        stroke="currentColor" stroke-linecap="round" 
+                        stroke-linejoin="round" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>           
+         </span>
+          <span class="navigation__tab-text">
+                Home
+            </span>
+            </a>
+        </div>
+    
+        <div class="navigation__tab-item">
+             <a href="#services">
+          <span class="navigation__tab-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-tag"
+                >
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  <line x1="7" y1="7" x2="7" y2="7"></line>
+                </svg>
+              </span>
+          <span class="navigation__tab-text">
+           
+                Services
+
+            </span>
+            </a>
+        </div>
+    
+        <div class="navigation__tab-item">
+            <a href="#portfolio">
+          <span class="navigation__tab-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-shopping-bag"
+                >
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+              </span>
+          <span class="navigation__tab-text">
+            Portfolio
+
+            </span>
+            </a>
+           
+        </div>
+    
+    
+        <div class="navigation__tab-item">
+            <a href="#contact">
+          <span class="navigation__tab-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-bell"
+                >
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+           </span>
+          <span class="navigation__tab-text">
+          Contact
+        </span>
+        
+        </a>
+        </div>
+    </span>
+
+</div>
 
 
    <!-- This is the website header -->
    <header>
       <div class="container header__container">
         <div class="header__left">
-            <div class="socials">
-                <ul class="header__socials">
-                    <li><a href="" target="_blank"></a></li>
-                    <li><a href="" target="_blank"></a></li>
-                    <li><a href="" target="_blank"></a></li>
-                </ul>
-            </div>
             <div>
                 <h3> Hello There! i'm </h3>
-            <h1>AbdulGafar</h1>
+            <h1 class="gradient__text">AbdulGafar</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                  Iusto aperiam aliquam commodi reiciendis, quod saepe.
             </p>
@@ -62,7 +165,7 @@
         </div>
 
         <div class="header__right">
-            <!-- this where the tictactoe game is -->
+            <!-- this is where the tictactoe game is -->
             <div class="game__container">
                 <div class="game__header">
                     <span id="header">
@@ -70,7 +173,7 @@
                         onclick="choosePlayer('X')"
                         id="xPlayer">X</div>
         
-                        <h3 id="titleHeader">Choose</h3>
+                        <p id="titleHeader">Choose</p>
                         <div class="player"
                         onclick="choosePlayer('O')"
                         id="oPlayer">O</div>
@@ -98,12 +201,256 @@
    </header>
 
 
-   <!-- companies section -->
+<section class="companies">
+    <div class="slider">
+        <div class="logos">
+            <img src="./images/logos/amazon.png" alt="">
+            <img src="./images/logos/deloitte.png" alt="">
+            <img src="./images/logos/ibm.png" alt="">
+            <img src="./images/logos/microsoft.png" alt="">
+            <img src="./images/logos/samsung.png" alt="">
+            <img src="./images/logos/tesla.png" alt="">
+            <img src="./images/logos/amazon.png" alt="">
+            <img src="./images/logos/deloitte.png" alt="">
+            <img src="./images/logos/ibm.png" alt="">
+            <img src="./images/logos/microsoft.png" alt="">
+        </div>
+        <div class="logos">
+            <img src="./images/logos/amazon.png" alt="">
+            <img src="./images/logos/deloitte.png" alt="">
+            <img src="./images/logos/ibm.png" alt="">
+            <img src="./images/logos/microsoft.png" alt="">
+            <img src="./images/logos/samsung.png" alt="">
+            <img src="./images/logos//tesla.png" alt="">
+            <img src="./images/logos/amazon.png" alt="">
+            <img src="./images/logos/deloitte.png" alt="">
+            <img src="./images/logos/ibm.png" alt="">
+            <img src="./images/logos/microsoft.png" alt="">
+        </div>
+       </div>
+</section>
 
-   <!-- <section id="companies">
-     
-   </section> -->
 
-   <script src="game.js"></script>
+<section id="services">
+    <div class="services__container">
+        <h3>My Services</h3>
+        <div class="stackarea">
+
+
+            <div class="anothercard">
+            
+                <div class="code__section">
+                
+                    <!-- first code container -->
+                    
+                    <div class="code__container">
+                        <div class="navbar">
+                            <div class="controls">
+                                <div class="button"></div>
+                                <div class="button"></div>
+                                <div class="button"></div>
+                            </div>
+                            <div class="title">portfolio/index.html</div>
+                        </div>
+                        <div class="code__block">
+                            <div>
+                                <span class="line__number">1</span>
+                               <span class="built__in"> &lt;div </span>
+                               <span class="variable">class</span>=<span class="string">&quot;portfolio&quot;</span><span class="built__in">&gt;</span>
+                            </div>
+            
+                            <div>
+                                <span class="line__number">2</span>&nbsp;&nbsp;
+                                <span class="built__in">&lt;h1&gt;</span>portfolio
+                                website<span class="built__in">&lt;/h1&gt;</span>
+                            </div>
+                            <div>
+                                <span class="line__number">3</span>&nbsp;&nbsp;
+                                <span class="built__in">&lt;p&gt;</span>only html,
+                                css and js<span class="built__in">&lt;/p&gt;</span>
+                            </div>
+                            
+                            <div>
+                                <span class="line__number">4</span>
+                                <span class="built__in"> &lt;/div&gt;</span>
+                            </div>
+            
+                        </div>
+                    </div>
+            
+            
+                    <!-- second code container -->
+            
+                    <div class="code__container">
+                        <div class="navbar">
+                            <div class="controls">
+                                <div class="button"></div>
+                                <div class="button"></div>
+                                <div class="button"></div>
+                            </div>
+                            <div class="title">portfolio/style.css</div>
+                        </div>
+                        <div class="code__block">
+                            <div>
+                                <span class="line__number">1</span>
+                                <span class="comment">/*text-typing animation*/</span>
+                            </div>
+                            <div class="animate-1">
+                                <span class="line__number">2</span>
+                                <span class="selector">.portfolio {</span>
+                            </div>
+            
+                            <div class="animate-2">
+                                <span class="line__number">3</span>&nbsp;&nbsp;
+                                <span class="variable">color:</span>
+                                <span class="string">#4c4f5</span>;
+                            </div>
+                            <div class="animate-3">
+                                <span class="line__number">4</span>&nbsp;&nbsp;
+                                <span class="variable">animation:</span>typing
+                                <span class="value">3s</span>
+                                <span class="string">linear</span>;
+                            </div>
+                            
+                            <div class="animate-4">
+                                <span class="line__number">5</span>&nbsp;&nbsp;
+                                <span class="variable">width:</span>
+                                <span class="value">250px</span>;
+                            </div>
+                            <div class="animate-5">
+                                <span class="line__number">6</span>&nbsp;
+                                <span class="selector">}</span>
+                            </div>
+                        </div>
+                    </div>
+                
+            
+            
+                    <!-- third code container-->
+                    <div class="code__container">
+                        <div class="navbar">
+                            <div class="controls">
+                                <div class="button"></div>
+                                <div class="button"></div>
+                                <div class="button"></div>
+                            </div>
+                            <div class="title">portfolio/database.js</div>
+                        </div>
+                        <div class="code__block">
+                            <div>
+                                <span class="line__number">1</span>
+                                <span class="built__in">new</span>
+                                <span class="function">RDS</span><span class="selector">(</span><span
+                                 class="built__in">this</span>,
+                                <span class="string">"database"</span>, <span class="curly">{</span>
+                            </div>
+            
+                            <div>
+                                <span class="line__number">2</span>&nbsp;&nbsp;
+                                <span class="variable">engine:</span> 
+                                <span class="string">"postgresql"</span>,
+                            </div>
+                            <div>
+                                <span class="line__number">3</span>&nbsp;&nbsp;
+                                <span class="variable">defaultName:</span>    
+                                <span class="string">"abdulgafar"</span>,
+                            </div>
+                            
+                            <div>
+                                <span class="line__number">4</span>&nbsp;&nbsp; 
+                                <span class="variable">migrations:</span>
+                                <span class="string">"scripts/migrations"</span>
+                            </div>
+                            <div>
+                                <span class="line__number">5</span><span class="curly">
+                                    }</span><span class="selector">)</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            
+            
+            </div>
+    
+            <div class="mobileArea">
+                <div class="carousel">
+                    <div class="card">
+                        <div class="card__content">
+                            <div class="card__content-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <rect height="14" rx="2" ry="2" width="20" x="2" y="3" />
+                                    <line x1="8" x2="16" y1="21" y2="21" />
+                                    <line x1="12" x2="12" y1="17" y2="21" />
+                                </svg>
+                            </div>
+                            <div class="card__content-text">
+                                Frontend Development
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                            <div class="card__content-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                             width="24" height="24" class="main-grid-item-icon" fill="none" 
+                             stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <rect height="20" rx="2" ry="2" width="14" x="5" y="2" />
+                                <line x1="12" x2="12.01" y1="18" y2="18" />
+                            </svg>
+      
+                            </div>
+                            <div class="card__content-text">
+                                Mobile Development
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                            <div class="card__content-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3" />
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                                </svg>
+      
+                            </div>
+                            <div class="card__content-text">
+                                Backend Development
+                            </div>
+                    </div>
+                </div>
+                    <div class="card">
+                        <div class="card__content">
+                            <div class="card__content-icon">
+                                    <!-- https://feathericons.dev/?search=codesandbox&iconset=feather -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                             width="24" height="24" class="main-grid-item-icon" fill="none"
+                              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                                <polyline points="7.5 4.21 12 6.81 16.5 4.21" />
+                                <polyline points="7.5 19.79 7.5 14.6 3 12" />
+                                <polyline points="21 12 16.5 14.6 16.5 19.79" />
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                                <line x1="12" x2="12" y1="22.08" y2="12" />
+                            </svg>
+      
+                            </div>
+                            <div class="card__content-text">
+                                3D Design
+                            </div>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+        </div>
+
+    </div>
+</section>
+  
+
+
+  
+   <script src="js/game.js"></script>
+   <script src="js/main.js"></script>
 </body>
 </html>
