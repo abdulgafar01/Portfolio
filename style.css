@@ -58,6 +58,8 @@ html{
     --curly-braces:#e08bd9 ;  /* purple for curly braces */
 }
 
+
+
 body{
     font-family: "poppins",sans-serif;
     font-weight: 300;
@@ -73,6 +75,25 @@ body.dark-theme{
     
    
 }
+::-webkit-scrollbar{
+    width: .7rem;
+   background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--scroll-bar-color);
+    margin-top: 4rem;
+    margin-bottom: 5.7rem;
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--scroll-thumb-color);
+    border-radius: 100vw;
+}
+
+
+
 h1,h2,h3,h4,h5{
     color:var(--text-color);
 }
@@ -225,12 +246,15 @@ nav .nav__menu  a{
 .window-scroll{
     background-color: var(--color-black);
     box-shadow: 0 1.5rem 1.5rem rgba(36, 0, 64, 0.2);
+    
 }
 
 .window-scroll .nav__menu a{
     color: #fff;
     
 }
+
+
 .window-scroll a h3{
     color: var(--color-white);   
 }
@@ -321,16 +345,12 @@ header{
     height: calc(100vh - 7rem);
     position: relative;
     top: 7rem;
-    /* place-items: center;
-    overflow: hidden; */
 }
 
 .header__container{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* display: grid;
-    grid-template-columns: 50% 50%; */
     height: 100%;
     gap: 12rem;
 } 
@@ -366,6 +386,20 @@ header{
     margin-top: 3rem;
     display: flex;
     gap: 1.5rem;
+}
+
+
+.header__left-button .download{
+   display: flex;
+   gap: 9px;
+}
+
+.header__left-button .download-icon{
+    transition: all 500ms ease;
+}
+
+.btn-primary:hover .download-icon{
+    transform: translateY(5px);
 }
 
   
@@ -520,7 +554,6 @@ button{
   
   .anothercard {
     padding: 20px;
-    /* background-color: blueviolet; */
     height: 100vh;
     flex-basis: 60%;
     position: sticky;
@@ -534,7 +567,6 @@ button{
     height: 100vh;
     position: sticky;
     top: 0;
-    /* background-color: blueviolet; */
     width: 500px;
     overflow: hidden;
     display: flex;
@@ -791,20 +823,22 @@ button{
   /*================================== STYLES FOR PORTFOLIO SECTION ================================*/
 
   #portfolio{
-    background-color: black;
+    background-color: var(--background-color);
     line-height: normal;
+    margin: 0;
+    padding: 2rem;
  }
 
  .portfolio__head{
     display: flex;
     justify-content: center;
     font-size: 2.5rem;
-    padding: 5rem;
+    padding: 1rem;
     color: var(--primary-color);
  }
  .portfolio__projects{
     max-width: 35rem;
-    margin: auto;
+    margin: 0 auto 0;
     height: 300vh;
  }
 
@@ -819,16 +853,16 @@ button{
  }
 
  .portfolio__project:nth-child(1){
-   top: 0;
+   top: 4.5rem;
  }
  .portfolio__project:nth-child(2){
-   top: 15px;
+   top: calc(4.5rem + 15px);
  }
  .portfolio__project:nth-child(3){
-   top: 30px;
+   top: calc(4.5rem + 30px);
  }
  .portfolio__project:nth-child(4){
-   top: 45px;
+   top: calc(4.5rem + 45px);
  }
 
  .portfolio__project-image{
@@ -902,19 +936,149 @@ button{
  }
 
 
+/* End of portfolio styles */
+
+
+ /*======= Contact Section styles  ===========*/
+
+ #contact{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    margin: 0;
+    padding: 3rem 0;
+ }
+
+ .contact__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 7rem;
+    font-size: 0.9rem;
+ }
+
+
+ .contact__container h2{
+    color: var(--color-light);
+ }
+ .contact__container hr{
+    border: none;
+    width: 5rem;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--color-light);
+ }
+
+ .contact__container p{
+    margin: 1rem 0 2rem;
+ }
+
+ .contact__socials{
+    display: flex;
+    gap: 1rem;
+ }
+
+ .contact__socials li{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+
+ }
+ .contact__socials a{
+    color: var(--color-white);
+    font-size: 1.3rem;
+    transition: all 400ms ease;
+ }
+ .contact__socials a:hover{
+    color: var(--color-white);
+ }
+
+
+ form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+ }
+
+ form input,textarea{
+    padding: 1rem;
+    border-radius: 8px;
+ }
+
+
+ form textarea{
+    resize: none;
+ }
+
+
+ /* form{
+    width: 600px;
+    text-align: center;
+ }
+
+ form .input-box{
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .input-box .input-field{
+    width: 48.5%;
+ }
+
+ .field .item{
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #0ef;
+    border-radius: 6px;
+    font-size: 16px;
+    margin: 12px 0;
+    color: #ededed;
+ }
+
+ .field .error-txt{
+    text-align: left;
+    font-size: 14px;
+    color: #d93025;
+    margin: -5px 0 6px;
+
+ }
+ form .textarea-field .item{
+    resize: none;
+ } */
+
+ .btn-send{
+    display: flex;
+    font-size: 1rem;
+    gap: 10px;
+    align-items: center;
+    transition: all 450ms ease-in;
+ }
+
+ .btn-send:hover{
+    transform: translate(3px, -3px);
+ }
+
+
+ footer{
+    text-align: center;
+    background-color: var(--color-primary);
+    color: var(--text-color-light);
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--color-black);
+ }
 
 
 
- 
 
 
 
 
 
 
-
-
-/*================================ This is for responsiveness in tablets and mobile devices==================================================== */
+/*================================ This is for responsiveness On tablets and mobile devices==================================================== */
 
 
 
@@ -1037,6 +1201,12 @@ button{
 /* for mobile responsiveness */
 
 @media screen and (max-width:600px) {
+
+
+    ::-webkit-scrollbar{
+        width: .7rem;
+       background-color: #000;
+    }
      
     .nav__menu{
         display: none;  
@@ -1068,7 +1238,7 @@ button{
 
 
 
-    /* Mobile design for service section */
+    /*==================== Mobile design for service section ================*/
     .anothercard{
         flex-basis: 100%;
     }
@@ -1131,8 +1301,12 @@ button{
       /*====================== portfolio section mobile======================= */
 
       .portfolio__project{
-        width: 23rem;
+        width: 21rem;
         margin: auto;
+      }
+
+      .portfolio__project-image{
+        height: 15rem;
       }
 
       .portfolio__project-text{
@@ -1141,9 +1315,28 @@ button{
           width: 300px; 
           transform: translate(2rem, -2rem);
         }
+
+
+
+        /*======================== Contact Section for Mobile =================*/
+
+        .contact__container{
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .contact__left hr{
+            width: 3rem ;
+        }
+
+
+        .contact__socials{
+           justify-content: center;
+        }
         
-        .portfolio__project-text h3{
-          /* font-size: 10px; */
+
+        footer{
+            margin-bottom: 99px;
         }
 
   

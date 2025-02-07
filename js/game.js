@@ -65,8 +65,8 @@ function handleMove(index) {
     // Switch to the next player's turn if the game is still active
     if (gameActive) {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // Toggle between 'X' and 'O'
-        titleHeader.textContent =  `${currentPlayer}'s Turn`; // Update the header
-        // titleHeader.textContent = currentPlayer === computerPlayer ? "computer's turn" : "your turn";
+        // titleHeader.textContent =  `${currentPlayer}'s Turn`; // Update the header
+        titleHeader.textContent = currentPlayer === computerPlayer ? "thinking..." : "your turn";
 
         // Highlight the current player
     if (currentPlayer === 'X') {
@@ -91,9 +91,9 @@ function checkGameStatus() {
         const [a, b, c] = combination; // Destructure indices for each combination
         if (board[a] && board[a] === board[b] && board[a] === board[c]) {
             gameActive = false; // Stop the game
-            titleHeader.textContent = `${board[a]} Wins!`; // Display the winner
+            // titleHeader.textContent = `${board[a]} Wins!`; // Display the winner
 
-            // titleHeader.textContent = currentPlayer === computerPlayer ? "you lost" : "you won"; // Display the winner
+            titleHeader.textContent = currentPlayer === computerPlayer ? "You lost" : "You won"; // Display the winner
             return;
         }
     }
