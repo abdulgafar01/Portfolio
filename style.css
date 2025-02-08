@@ -270,7 +270,7 @@ nav .nav__menu  a{
 .navigation__tab{
     max-width: 500px;
     width: 450px;
-    height: 100px;
+    height: 90px;
     display: flex;
     background-color: black;
     align-items: center;
@@ -288,7 +288,7 @@ nav .nav__menu  a{
     align-items: center;
     cursor: pointer;
     color: #7dbfff;
-    width: 80px;
+    width: 70px;
     
 }
 
@@ -845,7 +845,7 @@ button{
  .portfolio__project{
     position: sticky;
     top: 0;
-    height: 55vh;
+    height: 60vh;
     transform: scale(1);
     transition: all 1s ease;
     margin-bottom: 3rem;
@@ -881,18 +881,20 @@ button{
 
 
  .portfolio__project-image:hover img{
-    transform: translateY(calc(-100% + 18rem));
+    transform: translateY(calc(-100% + 20rem));
  }
 
  .portfolio__project-text{
-  
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
    z-index: 222;
    background-color: rgba(149, 43, 255, 0.5);
    backdrop-filter: blur(20px);
    padding: 1rem;
    max-width: 23rem;
-   height: 10.5rem;
-   color: black;
+   height: fit-content;
+   color: var(--text-color);
    width: fit-content;
    border-radius: 10px;
    border: 1px solid rgba(225, 225, 225, 0.1);
@@ -907,16 +909,17 @@ button{
 
 
  .portfolio__project-text .portfolio__link{
+ 
   display: flex;
-  justify-content: flex-end;
-  gap: 2px;
+  gap: 3px;
+  
  }
 
 
  .portfolio__project-text .portfolio__link a{
   display: flex;
   justify-content: space-between;
-  gap: 5px;
+  gap: 3px;
   text-decoration: none;
   align-items: center;
   width: fit-content;
@@ -926,7 +929,7 @@ button{
   transition: all 0.4s ease;
   border-radius: 10px;
   background: var(--primary-color);
-  color: black;
+  color: var(--text-color);
  }
 
  .portfolio__project-text .portfolio__link a:hover{
@@ -1012,42 +1015,6 @@ button{
  }
 
 
- /* form{
-    width: 600px;
-    text-align: center;
- }
-
- form .input-box{
-    display: flex;
-    justify-content: space-between;
- }
-
- .input-box .input-field{
-    width: 48.5%;
- }
-
- .field .item{
-    width: 100%;
-    padding: 10px;
-    background: transparent;
-    outline: none;
-    border: 2px solid #0ef;
-    border-radius: 6px;
-    font-size: 16px;
-    margin: 12px 0;
-    color: #ededed;
- }
-
- .field .error-txt{
-    text-align: left;
-    font-size: 14px;
-    color: #d93025;
-    margin: -5px 0 6px;
-
- }
- form .textarea-field .item{
-    resize: none;
- } */
 
  .btn-send{
     display: flex;
@@ -1198,7 +1165,7 @@ button{
 
 
 
-/* for mobile responsiveness */
+/*==================== for mobile responsiveness=========== */
 
 @media screen and (max-width:600px) {
 
@@ -1310,8 +1277,6 @@ button{
       }
 
       .portfolio__project-text{
-          /* left: 2rem;
-          bottom: 1.5rem; */
           width: 300px; 
           transform: translate(2rem, -2rem);
         }
@@ -1336,7 +1301,7 @@ button{
         
 
         footer{
-            margin-bottom: 99px;
+            margin-bottom: 89px;
         }
 
   
@@ -1344,7 +1309,83 @@ button{
 
 
 
-@media screen and (max-height:600px) {
+
+/* very small devices */
+
+@media screen and (max-width:380px) {
+    ::-webkit-scrollbar{
+        display: none;
+    }
+
+   
+    .mobile__nav{
+        width: 100%;
+    }
+    .navigation__tab{
+        width: 380px;
+    }
+
+    /* .navigation__tab-item.active{
+        padding: 18px;
+    } */
+
+    nav{
+        width: 100%;
+    }
+
+    .header__left h1{
+       font-size: 2.5rem;
+    }
+    .btn{
+        padding: .5rem .8rem;
+    }
+
+    .stackarea{
+        height: 360vh;
+    }
+
+    .card{
+        width: 240px;
+        height: 240px;
+        top: calc(50% - 120px);
+        left: calc(50% - 120px);
+    }
+
+    .portfolio__head{
+        font-size: 1.5rem;
+    }
+
+    .portfolio__projects{
+        height: 550vh;
+    }
+
+    .portfolio__project{
+        width: 16rem;
+        height: 75vh;
+        margin: auto;
+    }
+
+    .portfolio__project-image{
+        height: 10rem;
+    }
+
+    
+    .portfolio__project-text{
+        width: 260px; 
+        transform: translate(.5rem, -1rem);
+      }
+
+      .portfolio__project-text h3{
+       font-size: 1rem;
+       margin-bottom: 6px;
+      }
+
+     
+}
+
+
+
+@media screen and (max-height:340px) {
 
     .portfolio__projects{
       height: 400vh;
