@@ -288,7 +288,7 @@ nav .nav__menu  a{
     align-items: center;
     cursor: pointer;
     color: #7dbfff;
-    width: 70px;
+    width: 50px;
     
 }
 
@@ -298,7 +298,7 @@ nav .nav__menu  a{
     transition-duration: 0.3s;
     transform: translate(0, 20px);
     user-select: none;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .navigation__tab-item .navigation__tab-icon,.navigation__tab-text{
@@ -313,7 +313,7 @@ nav .nav__menu  a{
 .navigation__tab-item.active{
     border-radius: 15px;
     background-color: #f0f8ff;
-    padding: 20px;
+    padding: 18px;
     width: fit-content;
     transition-duration: 0.3s;
 }
@@ -331,11 +331,11 @@ nav .nav__menu  a{
 
 
 .navigation__tab-item.active:nth-child(1){
-    border-bottom-left-radius: 50px;
+    border-bottom-left-radius: 30px;
 }
 
 .navigation__tab-item.active:nth-child(4){
-    border-bottom-right-radius: 50px;
+    border-bottom-right-radius: 30px;
 }
 
 
